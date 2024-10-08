@@ -5,6 +5,7 @@ My Blog
 {% endblock %} 
 
 {% block css_file %}
+<link rel="stylesheet" href="{% static 'blog/post.css' %}" />
 <link rel="stylesheet" href="{% static 'blog/index.css' %}" />
 {% endblock %}
 
@@ -26,23 +27,11 @@ My Blog
 
 <section id="latest-posts">
   <h2>My Latest Thoughts</h2>
+
   <ul>
-    <li>
-      <article class="post">
-        <a href="">
-          <img src="" alt="Mountain Hiking" />
-          <div class="post__content">
-            <h3>Mountain Hiking</h3>
-            <p>
-              There's nothing like a great hike to start the day. I went for a
-              hike with my friend and we had a great time. We hiked for about an
-              hour and then we went back to our hotel. It was a beautiful day
-              and we had a great time.
-            </p>
-          </div>
-        </a>
-      </article>
-    </li>
+    {% for post in posts %}
+        {% include "blog/includes/post.html" %}
+   {% endfor %}
   </ul>
 </section>
 
