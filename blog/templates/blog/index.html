@@ -1,0 +1,64 @@
+{% extends "base.html" %} 
+{% load static %}
+{% block title %} 
+My Blog 
+{% endblock %} 
+
+{% block css_file %}
+<link rel="stylesheet" href="{% static 'blog/index.css' %}" />
+{% endblock %}
+
+{% block content %}
+<header id="main-navigation">
+  <h1><a href="">Sumanth's Blog</a></h1>
+  <nav><a href="">All Posts</a></nav>
+</header>
+<section id="welcome">
+  <header>
+    <img src="{% static "blog/images/max.png" %}" alt="Sumanth - The Author" />
+    <h2>Sumanth's Blog</h2>
+  </header>
+  <p>
+    Hi, i am Sumanth and I love to write about my experiences and thoughts on
+    life, programming, and anything else that I find interesting.
+  </p>
+</section>
+
+<section id="latest-posts">
+  <h2>My Latest Thoughts</h2>
+  <ul>
+    <li>
+      <article class="post">
+        <a href="">
+          <img src="" alt="Mountain Hiking" />
+          <div class="post__content">
+            <h3>Mountain Hiking</h3>
+            <p>
+              There's nothing like a great hike to start the day. I went for a
+              hike with my friend and we had a great time. We hiked for about an
+              hour and then we went back to our hotel. It was a beautiful day
+              and we had a great time.
+            </p>
+          </div>
+        </a>
+      </article>
+    </li>
+  </ul>
+</section>
+
+<section id="about">
+  <h2>What I Do</h2>
+  <p>
+    I love programming, I love to help others and I enjoy exploring new
+    Technologies in general!
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui totam quidem
+    ullam delectus accusamus. Ducimus sed voluptas iusto cupiditate! Error
+    quibusdam corrupti maiores pariatur voluptates, iusto dolore rerum iste
+    officiis.
+  </p>
+</section>
+
+<!-- <h1>Welcome to my blog</h1> -->
+{% endblock %}
